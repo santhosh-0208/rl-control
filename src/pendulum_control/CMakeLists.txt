@@ -24,6 +24,7 @@ ament_target_dependencies(ac_controller rclcpp std_msgs geometry_msgs control_ms
 # ament_target_dependencies(data_logger rclcpp std_msgs geometry_msgs)
 include_directories(
   /home/santhosh/headers
+  ${CMAKE_CURRENT_SOURCE_DIR}/include/
 )
 
 target_include_directories(pendulum_sim PRIVATE ${EIGEN3_INCLUDE_DIRS})

@@ -70,7 +70,7 @@ private:
         auto msg = geometry_msgs::msg::Vector3();
         msg.x = theta_;
         msg.y = theta_dot_;
-        if (fabs(theta_) > 10)
+        if (fabs(theta_) > 4.0)
         {
             episode_failed = true;
         }
@@ -103,7 +103,6 @@ private:
             episode_length_counter = 0;
             counter = 0;
             episode_failed = false;
-            std::cout<<"resetting episode"<<std::endl;
         }
         state_pub_->publish(msg);
     }

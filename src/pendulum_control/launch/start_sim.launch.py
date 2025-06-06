@@ -20,5 +20,11 @@ def generate_launch_description():
             executable='ac_controller',
             name='ac_controller',
             output='screen'
+        ),
+        Node(
+            package='pendulum_control',
+            executable='nn_controller',
+            name='nn_controller',
+            output='screen'
         )
     ])
